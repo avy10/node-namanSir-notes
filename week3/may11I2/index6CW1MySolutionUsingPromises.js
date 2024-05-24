@@ -1,3 +1,4 @@
+// PROMISES WAS NOT SUPPOSED TO BE USED
 const fs = require("fs").promises;
 const path = require("path");
 
