@@ -29,3 +29,11 @@ app.get("/try", (req, res) => {
 app.listen(PORT, () => {
 	console.log(`server is up and running at port ${PORT}`);
 });
+
+// problems with this solution
+// 1. does not write newer lines to the file
+// 2. wrongfully sends response i.e.
+// response is sent even before file writing op is completed,
+// thus if any error arise in file writing comp the res will be sent anyway
+// moreover I was trying to read the file in order to determine if file exists or not,
+// but for the task in hand, appendFile would have done the job
